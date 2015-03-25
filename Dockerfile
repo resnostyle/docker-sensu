@@ -16,6 +16,9 @@ RUN echo "EMBEDDED_RUBY=true" > /etc/default/sensu & ln -s /opt/sensu/embedded/b
 RUN /opt/sensu/embedded/bin/gem install influxdb
 COPY influx.rb /etc/sensu/extensions/
 
+COPY run.sh /opt/
+COPY supervisord.conf /etc/
+
 VOLUME /etc/sensu
 VOLUME /var/log/sensu
 
@@ -24,3 +27,6 @@ EXPOSE 4567
 
 # rabbitmq
 EXPOSE 5672
+
+
+CMD ["/opt/run.sh"]
