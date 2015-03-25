@@ -39,7 +39,7 @@ cat << EOF > /etc/sensu/conf.d/influx.json
         "port": "8086",
         "user": "stats",
         "password": "stats",
-        "database": "stats",
+        "database": "stats"
     }
 }
 EOF
