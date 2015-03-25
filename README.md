@@ -1,7 +1,8 @@
-# sensu docker image 
-### (based on https://github.com/arcus-io/docker-sensu)
+# sensu
 
-processes (handled by supervisord):
+### [https://github.com/jhrv/docker-sensu](https://github.com/jhrv/docker-sensu)
+
+### processes (handled by supervisord):
 
 - sensu-server
 - redis
@@ -10,3 +11,4 @@ processes (handled by supervisord):
 
 The image also includes configuration for handling influxdb events
 
+### (based on https://github.com/arcus-io/docker-sensu)
