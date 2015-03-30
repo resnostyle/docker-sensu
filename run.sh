@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#test
 INFLUXDB_URL=${INFLUXDB_URL:-influxdb.adeo.no}
 
 cat << EOF > /etc/sensu/conf.d/config.json
