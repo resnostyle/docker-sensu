@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://appconfig.aura.nav.no"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://appconfig.aura.nav.no http://maven.adeo.no/xsd/appconfig.xsd ">
+	<name>sensu</name>
+
+    <artifacts>
+        <!--container name="docker.adeo.no:5000/sensu" /-->
+    </artifacts>
+
+	<exposed-services>
+		<exposedRest name="sensuApi" containerPort="4567" description="sensu api endpoint" path="/" />
+        <!--exposedUrl name="rabbitMqEndpoint" containerPort="5672" path="/sensu" description="rabbitmq endpoint for sensu-clients" /-->
+	</exposed-services>
+
+	<resources>
+		<rest alias="influxdb" />
+	</resources>
+</application>
